@@ -33,7 +33,7 @@ jobs:
       - uses: actions/checkout@v4
       
       - name: Build ${{ matrix.platform }} Package
-        uses: YOUR_USERNAME/beeware-builder-action@v1
+        uses: aghastmuffin/beeware-builder-action@v1
         with:
           platform: ${{ matrix.platform }}
       
@@ -71,7 +71,7 @@ jobs:
       
       - name: Build Package
         id: build
-        uses: YOUR_USERNAME/beeware-builder-action@v1
+        uses: aghastmuffin/beeware-builder-action@v1
         with:
           platform: ${{ matrix.platform }}
           python-version: '3.11'
@@ -85,7 +85,7 @@ jobs:
 ### Custom Configuration
  
 ```yaml
-- uses: YOUR_USERNAME/beeware-builder-action@v1
+- uses: aghastmuffin/beeware-builder-action@v1
   with:
     # Target platform (required)
     platform: 'macOS'
@@ -142,7 +142,7 @@ The action automatically installs required system libraries. If you need additio
 - name: Install Extra Dependencies
   run: sudo apt-get install -y your-package
   
-- uses: YOUR_USERNAME/beeware-builder-action@v1
+- uses: aghastmuffin/beeware-builder-action@v1
   with:
     platform: Linux
 ```
